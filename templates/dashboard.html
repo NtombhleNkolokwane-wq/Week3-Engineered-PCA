@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+<h1>Steel Plant Energy Dashboard</h1>
+
+<hr>
+
+<a href="/">Home</a> |
+<a href="/dashboard">Dashboard</a> |
+<a href="/predict">Prediction</a>
+
+<hr>
+
+<h2>Energy Consumption by Hour</h2>
+
+<img src="{{ url_for('static', filename='energy_hour.png') }}" width="700">
+
+<h2>Average Energy Consumption by Load Type</h2>
+
+<img src="{{ url_for('static', filename='load_type.png') }}" width="700">
+
+<h2>Correlation Heatmap</h2>
+
+<img src="{{ url_for('static', filename='correlation_heatmap.png') }}" width="700">
+
+</body>
+</html>

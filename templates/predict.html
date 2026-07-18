@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prediction</title>
+</head>
+
+<body>
+
+<h1>Predict Steel Plant Energy Consumption</h1>
+
+<hr>
+
+<a href="/">Home</a> |
+<a href="/dashboard">Dashboard</a> |
+<a href="/predict">Prediction</a>
+
+<hr>
+
+<form method="POST">
+
+<label>Lagging Current Reactive Power:</label><br>
+<input type="number" step="any" name="Lagging_Current_Reactive.Power_kVarh"><br><br>
+
+<label>Leading Current Reactive Power:</label><br>
+<input type="number" step="any" name="Leading_Current_Reactive_Power_kVarh"><br><br>
+
+<label>CO2(tCO2):</label><br>
+<input type="number" step="any" name="CO2(tCO2)"><br><br>
+
+<input type="submit" value="Predict">
+
+</form>
+
+{% if prediction %}
+
+<h2>Predicted Energy Consumption:</h2>
+
+<h3>{{ prediction }}</h3>
+
+{% endif %}
+
+</body>
+
+</html>
